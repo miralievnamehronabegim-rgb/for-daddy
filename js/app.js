@@ -227,16 +227,21 @@ nextBtn.addEventListener("click", () => {
 
     currentIndex++;
 
+if (currentIndex < photos.length) {
 
-    /* ЕЩЁ ЕСТЬ ФОТО */
+    photo.style.opacity = "0";
 
-    if (currentIndex < photos.length) {
+    setTimeout(() => {
 
         photo.src = photos[currentIndex];
         message.textContent = messages[currentIndex];
 
-        return;
-    }
+        photo.style.opacity = "1";
+
+    }, 800);
+
+    return;
+}
 
 
     /* =========================
