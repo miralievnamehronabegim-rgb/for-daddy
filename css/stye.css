@@ -215,7 +215,7 @@ body {
 
     display: block;
 
-    transition: opacity 0.3s ease;
+    transition: opacity 0.8s ease-in-out;
 }
 
 
