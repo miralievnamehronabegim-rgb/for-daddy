@@ -244,7 +244,7 @@ if (currentIndex < photos.length) {
 
             photo.style.opacity = "1";
 
-        }, 300);
+        }, 200);
 
     };
 
