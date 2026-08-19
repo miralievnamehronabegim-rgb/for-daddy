@@ -229,20 +229,27 @@ nextBtn.addEventListener("click", () => {
 
 if (currentIndex < photos.length) {
 
-    photo.style.opacity = "0";
+    const newPhoto = new Image();
 
-    setTimeout(() => {
+    newPhoto.src = photos[currentIndex];
 
-        photo.src = photos[currentIndex];
-        message.textContent = messages[currentIndex];
+    newPhoto.onload = () => {
 
-        photo.style.opacity = "1";
+        photo.style.opacity = "0";
 
-    }, 800);
+        setTimeout(() => {
+
+            photo.src = newPhoto.src;
+            message.textContent = messages[currentIndex];
+
+            photo.style.opacity = "1";
+
+        }, 300);
+
+    };
 
     return;
 }
-
 
     /* =========================
        ФОТО ЗАКОНЧИЛИСЬ
